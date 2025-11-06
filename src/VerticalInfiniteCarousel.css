@@ -1,0 +1,83 @@
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  width: 100%;
+  gap: 2rem;
+  padding: 2rem;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+p {
+  text-align: justify;
+}
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.left-content h1 {
+  font-size: 650%;
+  margin-top: 0;
+}
+.right-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  margin: auto 0;
+  overflow: hidden; /* asegura que nada se salga */
+}
+:root {
+  --vin-duration: 18s;
+  --vin-item-height: 200px;
+}
+
+.vin-viewport {
+  width: 100%;
+  height: 100%; /* ocupa el 100% del espacio del contenedor padre */
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vin-track {
+  display: flex;
+  flex-direction: column;
+  animation: vin-scroll var(--vin-duration) linear infinite;
+}
+
+/* Cada imagen mantiene proporción exacta */
+.vin-item {
+  flex: 0 0 var(--vin-item-height);
+  height: var(--vin-item-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vin-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+/* Movimiento exacto para bucle perfecto */
+@keyframes vin-scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Pausa al pasar el mouse */
+.vin-viewport:hover .vin-track {
+  animation-play-state: paused;
+}
