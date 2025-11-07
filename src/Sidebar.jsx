@@ -16,13 +16,13 @@ export const Sidebar = () => {
         <Link to="/casos-historicos">
           <h3>CASOS HISTORICOS</h3>
         </Link>
-        <Link to="/">
+        <Link to="/articulos-violados">
           <h3>ARTICULOS VIOLADOS</h3>
         </Link>
-        <Link to="/">
+        <Link to="/derechos-trabajador">
           <h3>DERECHOS DEL TRABAJADOR</h3>
         </Link>
-        <Link to="/">
+        <Link to="/zonas-riesgo">
           <h3>ZONAS DE RIESGO</h3>
         </Link>
       </div>

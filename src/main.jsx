@@ -22,6 +22,9 @@ createRoot(document.getElementById("root")).render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/casos-historicos" element={<CasosHistoricos />} />
+          <Route path="/articulos-violados" />
+          <Route path="/derechos-trabajador" />
+          <Route path="/zonas-riesgo" />
         </Routes>
       </div>
     </Router>
