@@ -248,11 +248,12 @@ h1 {
   .menu-content {
     flex-direction: row;
     justify-content: space-around;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
   }
 
   .menu-content h3 {
     font-size: 1rem;
+    text-align: center;
   }
 
   .logo-content img {
