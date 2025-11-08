@@ -10,8 +10,14 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  overflow: hidden; /* bloquea el scroll global */
+  overflow: auto; /* bloquea el scroll global */
   background: #232323;
+}
+h1 {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 
 #root {
@@ -25,6 +31,7 @@ body {
   grid-template-rows: 1fr 4fr 1fr;
   background: #1a1a1a;
   border-right: 1px solid #333;
+  overflow: hidden;
 }
 
 .logo-content {
@@ -62,9 +69,8 @@ body {
 }
 
 .main {
-  padding: 2rem;
   padding-top: 0;
-  overflow: hidden; /* evita scroll dentro del main */
+  overflow: auto; /* evita scroll dentro del main */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,28 +134,31 @@ body {
   object-fit: cover;
 }
 .main {
-  padding: 2rem;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .subtema {
-  min-height: 100vh;
+  min-height: 100%;
   background: linear-gradient(135deg, #111, #1b1b1b, #242424);
   color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 4rem 6rem;
+  padding: 0rem 6rem 4rem 6rem;
   gap: 3rem;
   box-sizing: border-box;
+  width: 100%;
+    overflow-y: auto; /* permite subir/bajar */
+
 }
 
 .subtema-texto {
   flex: 1;
+  margin-top: 5rem;
 }
 
 .subtema-texto h1,.articulosviolados {
@@ -208,7 +217,9 @@ body {
     flex-direction: column;
     padding: 2rem;
   }
-
+  .menu {
+    display: block;
+  }
   .subtema-imagenes {
     flex-wrap: wrap;
     justify-content: center;
@@ -216,5 +227,44 @@ body {
 
   .imagen-container img {
     height: 200px;
+  }
+}@media (max-width: 900px) {
+  #root {
+    display: block;
+  }
+
+  .menu {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-right: none;
+    border-bottom: 1px solid #333;
+  }
+
+  .main {
+    display: block;
+  }
+
+  .menu-content {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0;
+  }
+
+  .menu-content h3 {
+    font-size: 1rem;
+  }
+
+  .logo-content img {
+    width: 100px;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .social-media {
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
   }
 }
