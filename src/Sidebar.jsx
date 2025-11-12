@@ -26,7 +26,7 @@ export const Sidebar = () => {
           <h3>ZONAS DE RIESGO</h3>
         </Link>
       </div>
-      <a className="ig" target="_blank" href="https://www.instagram.com/wakeupculture2025">
+      <a className="ig" target="_blank" href="https://www.instagram.com/injusticia_laboral2025">
         <svg
           width="25px"
           height="25px"
